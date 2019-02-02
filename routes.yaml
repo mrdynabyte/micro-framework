@@ -1,0 +1,65 @@
+#Format:
+#route_alias:
+#   method: POST
+#   url: /example
+#   controller: UriController@actionToPerform
+#   protected: true
+
+hello_world:
+  method: GET
+  url: /helloworld
+  controller: App\Controllers\HelloWorldController@helloworld
+
+signup:
+  method: POST
+  url: /signup
+  controller: App\Controllers\UsersController@new
+
+delete_user:
+  method: DELETE
+  url: /user
+  controller: App\Controllers\UsersController@deleteByEmail
+  protected: true
+
+auth:
+  method: POST
+  url: /auth
+  controller: App\Controllers\AuthController@auth
+
+rate_recipe:
+   method: POST
+   url: /recipes/{id}/rating
+   controller: App\Controllers\RecipesController@rate
+
+search:
+   method: POST
+   url: /recipes/search
+   controller: App\Controllers\RecipesController@search
+
+create_recipe:
+  method: POST
+  url: /recipes
+  controller: App\Controllers\RecipesController@create
+  protected: true
+
+query_recipe:
+   method: GET
+   url: /recipes/{id}
+   controller: App\Controllers\RecipesController@get
+  
+list_recipes:
+   method: GET 
+   url: /recipes 
+   controller: App\Controllers\RecipesController@list
+
+update_recipe:
+   method: PUT 
+   url: /recipes/{id}
+   controller: App\Controllers\RecipesController@update
+   protected: true
+
+delete_recipe:
+   method: DELETE
+   url: /recipes/{id}
+   controller: App\Controllers\RecipesController@delete
+   protected: true
